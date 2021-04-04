@@ -22,7 +22,7 @@ FalsaPos = function(p0,p1,Tol, N){
   while(i <= N) {
     p = p1 - q1*(p1-p0)/(q1-q0)
     if (abs(p - p1) < Tol ){
-      return(paste('el método funciono despues de',i,'intento, con resultado:',p))
+      return(paste('el mÃ©todo funciono despues de',i,'intento, con resultado:',p))
     } 
       i = i+1
       q = f1(p)
@@ -39,15 +39,15 @@ FalsaPos = function(p0,p1,Tol, N){
 }
 FalsaPos(1,2, 10^-2, 100)
 #Newton(1.82,10^-2, 100)
-#"el método funciono despues de 1 intento, con resultado: 1.82945804108693"
+#"el mÃ©todo funciono despues de 1 intento, con resultado: 1.82945804108693"
 #Secante(1,2, 10^-2, 100)
-#"el método funciono despues de 5 intento, con resultado: 1.82933117293153"
+#"el mÃ©todo funciono despues de 5 intento, con resultado: 1.82933117293153"
 #FalsaPos(1,2, 10^-2, 100)
-#"el método funciono despues de 5 intento, con resultado: 1.82900578275123"
+#"el mÃ©todo funciono despues de 5 intento, con resultado: 1.82900578275123"
 
-#????ln(x-1) + cos(x-1) = 0 x E [1.3;2] ----
+#ln(x-1) + cos(x-1) = 0 x E [1.3;2] ----
 f2 = function(x){
-  x = log10(x-1) + cos(x-1)
+  x = log(x-1) + cos(x-1)
 }
 x = 1.3:2
 x
@@ -66,7 +66,7 @@ FalsaPos = function(p0,p1,Tol, N){
     while(i <= N) {
       p = p1 - q1*(p1-p0)/(q1-q0)
       if (abs(p - p1) < Tol ){
-        return(paste('el método funciono despues de',i,'intento, con resultado:',p))
+        return(paste('el m?todo funciono despues de',i,'intento, con resultado:',p))
       } 
       i = i+1
       q = f2(p)
@@ -80,14 +80,14 @@ FalsaPos = function(p0,p1,Tol, N){
   }
   return(paste('el metodo no funciono despues de', N, 'iteraciones, con resultado aproximado:',p))
 }
-FalsaPos(1.3,2, 10^-8, 100)
+FalsaPos(1.3,2, 10^-2, 100)
 #Newton(1.3,10^-2, 100)
-#"el método funciono despues de 4 intento, con resultado: 1.10868036376373"
-#Secante(1.9,2,10^-2, 100)
-#"el método funciono despues de 5 intento, con resultado: 2.83843824179344"
-#FalsaPos(1.9,2, 10^-8, 100)
-#Error in paste("el metodo no funciono despues de", N, "iteraciones, con resultado aproximado:",  : 
-#object 'p' not found
+#"el m?todo funciono despues de 3 intento, con resultado: 1.39774816447362"
+#Secante(1.3,2,10^-2, 100)
+#""el m?todo funciono despues de 7 intento, con resultado: 1.39776900040813"
+#FalsaPos(1.3,2, 10^-2, 100)
+#"el m?todo funciono despues de 5 intento, con resultado: 1.39830409248341"
+
 
 #2*x*cos(2*x) - (x-2)^2 = 0 x E [2;3] ^ x E [3;4]----
 f3 = function(x){
@@ -110,7 +110,7 @@ FalsaPos = function(p0,p1,Tol, N){
     while(i <= N) {
       p = p1 - q1*(p1-p0)/(q1-q0)
       if (abs(p - p1) < Tol ){
-        return(paste('el método funciono despues de',i,'intento, con resultado:',p))
+        return(paste('el mÃ©todo funciono despues de',i,'intento, con resultado:',p))
       } 
       i = i+1
       q = f3(p)
@@ -128,11 +128,11 @@ FalsaPos = function(p0,p1,Tol, N){
 FalsaPos(2,3, 10^-1, 100)
 
 # Newton(2.4,10^-1, 100)
-# "el método funciono despues de 1 intento, con resultado: 2.42551928434498"
+# "el mÃ©todo funciono despues de 1 intento, con resultado: 2.42551928434498"
 #Secante(2,3,10^-1, 100)
-#"el método funciono despues de 3 intento, con resultado: 2.37314878342558"
+#"el mÃ©todo funciono despues de 3 intento, con resultado: 2.37314878342558"
 #FalsaPos(2,3, 10^-1, 100)
-#"el método funciono despues de 3 intento, con resultado: 2.37314878342558"
+#"el mÃ©todo funciono despues de 3 intento, con resultado: 2.37314878342558"
 
 x = 3:4
 x
@@ -144,15 +144,15 @@ abline(h=0)
 abline(v=0)
 FalsaPos(3,4, 10^-1, 10000)
 #Newton(3.7,10^-1, 10000)
-#"el método funciono despues de 1 intento, con resultado: 3.66703924054236"
+#"el mÃ©todo funciono despues de 1 intento, con resultado: 3.66703924054236"
 #Secante(3,4,10^-1, 10000)
-#"el método funciono despues de 4 intento, con resultado: 3.73192046127779"
+#"el mÃ©todo funciono despues de 4 intento, con resultado: 3.73192046127779"
 #FalsaPos(3,4, 10^-1, 10000)
-#"el método funciono despues de 4 intento, con resultado: 3.71664800443077"
+#"el mÃ©todo funciono despues de 4 intento, con resultado: 3.71664800443077"
 
-#????(x-2)^2 - ln(x) = 0 x E [1;2] ^ x E [e; 4] ESTE MAL----
+#(x-2)^2 - ln(x) = 0 x E [1;2] ^ x E [e; 4]----
 f4 = function(x){
-  x = (x-2)^2 - log10(x)
+  x = (x-2)^2 - log(x)
 }
 x = 1:2
 x
@@ -171,7 +171,7 @@ FalsaPos = function(p0,p1,Tol, N){
     while(i <= N) {
       p = p1 - q1*(p1-p0)/(q1-q0)
       if (abs(p - p1) < Tol ){
-        return(paste('el método funciono despues de',i,'intento, con resultado:',p))
+        return(paste('el m?todo funciono despues de',i,'intento, con resultado:',p))
       } 
       i = i+1
       q = f4(p)
@@ -188,11 +188,11 @@ FalsaPos = function(p0,p1,Tol, N){
 }
 FalsaPos(1,2, 10^-3, 100)
 #Newton(1,10^-3, 100)
-#"el método funciono despues de 4 intento, con resultado: 1.56041049616681"
+#"el m?todo funciono despues de 4 intento, con resultado: 1.41239117196258"
 #Secante(1,2, 10^-3, 100)
-#"el método funciono despues de 7 intento, con resultado: 1.56041251743393"
+#"el m?todo funciono despues de 7 intento, con resultado: 1.41239118275496"
 #FalsaPos(1,2, 10^-3, 100)
-#"el método funciono despues de 8 intento, con resultado: 1.56089198691696"
+#"el m?todo funciono despues de 7 intento, con resultado: 1.41250118679691"
 
 x = exp(1):4
 x
@@ -204,9 +204,11 @@ abline(h=0)
 abline(v=0)
 FalsaPos(exp(1),4, 10^-2, 10000)
 #Newton(exp(1),10^-2, 10000)
-#"el método funciono despues de 2 intento, con resultado: 2.6506683721065"
+#"el m?todo funciono despues de 3 intento, con resultado: 3.057130224063"
 #Secante(exp(1),4, 10^-2, 10000)
-# "el método funciono despues de 5 intento, con resultado: 2.65066664137801"
+# "el m?todo funciono despues de 5 intento, con resultado: 3.05695222946634"
+#FalsaPos(exp(1),4, 10^-2, 10000)
+#"el m?todo funciono despues de 6 intento, con resultado: 3.05469949116709"
 
 #e^x - 3*x^2 = 0 x E [0;1] ^ x E [3;5]----
 f5 = function(x){
@@ -229,7 +231,7 @@ FalsaPos = function(p0,p1,Tol, N){
     while(i <= N) {
       p = p1 - q1*(p1-p0)/(q1-q0)
       if (abs(p - p1) < Tol ){
-        return(paste('el método funciono despues de',i,'intento, con resultado:',p))
+        return(paste('el mÃ©todo funciono despues de',i,'intento, con resultado:',p))
       } 
       i = i+1
       q = f5(p)
@@ -246,11 +248,11 @@ FalsaPos = function(p0,p1,Tol, N){
 }
 FalsaPos(0,1, 10^-2, 100)
 #Newton(0,10^-2, 100)
-#"el método funciono despues de 2 intento, con resultado: 0.910017665783406"
+#"el mÃ©todo funciono despues de 2 intento, con resultado: 0.910017665783406"
 #Secante(0,1, 10^-2, 100)
-#"el método funciono despues de 4 intento, con resultado: 0.910623538896086"
+#"el mÃ©todo funciono despues de 4 intento, con resultado: 0.910623538896086"
 #FalsaPos(0,1, 10^-2, 100)
-#"el método funciono despues de 4 intento, con resultado: 0.909652535093112"
+#"el mÃ©todo funciono despues de 4 intento, con resultado: 0.909652535093112"
 
 x = seq(from=3, to=5, by= 0.01)
 x
@@ -262,11 +264,11 @@ abline(h=0)
 abline(v=0)
 FalsaPos(3,5, 10^-2, 100)
 #Newton(5,10^-2, 100)
-#"el método funciono despues de 5 intento, con resultado: 3.73308078919076"
+#"el mÃ©todo funciono despues de 5 intento, con resultado: 3.73308078919076"
 #Secante(3,5, 10^-2, 100)
-#"el método funciono despues de 9 intento, con resultado: 3.73307383612786"
+#"el mÃ©todo funciono despues de 9 intento, con resultado: 3.73307383612786"
 #FalsaPos(3,5, 10^-2, 100)
-#"el método funciono despues de 12 intento, con resultado: 3.71929025615647"
+#"el mÃ©todo funciono despues de 12 intento, con resultado: 3.71929025615647"
 
 #sin(x) - e^-x = 0 x E [0;1] ^ x E [3;4] ^ x E [6;7]----
 f6 = function(x){
@@ -289,7 +291,7 @@ FalsaPos = function(p0,p1,Tol, N){
     while(i <= N) {
       p = p1 - q1*(p1-p0)/(q1-q0)
       if (abs(p - p1) < Tol ){
-        return(paste('el método funciono despues de',i,'intento, con resultado:',p))
+        return(paste('el mÃ©todo funciono despues de',i,'intento, con resultado:',p))
       } 
       i = i+1
       q = f6(p)
@@ -306,11 +308,11 @@ FalsaPos = function(p0,p1,Tol, N){
 }
 FalsaPos(0,1, 10^-2, 100)
 #Newton(0,10^-2, 100)
-#"el método funciono despues de 3 intento, con resultado: 0.588529412626355"
+#"el mÃ©todo funciono despues de 3 intento, con resultado: 0.588529412626355"
 #Secante(0,1, 10^-2, 100)
-#"el método funciono despues de 5 intento, con resultado: 0.588538358017851"
+#"el mÃ©todo funciono despues de 5 intento, con resultado: 0.588538358017851"
 #FalsaPos(0,1, 10^-2, 100)
-#"el método funciono despues de 5 intento, con resultado: 0.589116839340323"
+#"el mÃ©todo funciono despues de 5 intento, con resultado: 0.589116839340323"
 
 x = seq(from=3, to=4, by= 0.01)
 x
@@ -322,11 +324,11 @@ abline(h=0)
 abline(v=0)
 FalsaPos(3,4, 10^-2, 100)
 #Newton(3,10^-2, 100)
-#"el método funciono despues de 2 intento, con resultado: 3.09636396089665"
+#"el mÃ©todo funciono despues de 2 intento, con resultado: 3.09636396089665"
 #Secante(3,4, 10^-2, 100)
-#"el método funciono despues de 4 intento, con resultado: 3.09636350534766"
+#"el mÃ©todo funciono despues de 4 intento, con resultado: 3.09636350534766"
 #FalsaPos(3,4, 10^-2, 100)
-#"el método funciono despues de 3 intento, con resultado: 3.09630840763863"
+#"el mÃ©todo funciono despues de 3 intento, con resultado: 3.09630840763863"
 
 x = seq(from=6, to=7, by= 0.01)
 x
@@ -338,11 +340,11 @@ abline(h=0)
 abline(v=0)
 FalsaPos(6,7, 10^-2, 100)
 #Newton(7,10^-2, 100)
-#"el método funciono despues de 3 intento, con resultado: 6.28504927021944"
+#"el mÃ©todo funciono despues de 3 intento, con resultado: 6.28504927021944"
 #Secante(6,7, 10^-2, 100)
-#"el método funciono despues de 4 intento, con resultado: 6.28504936779047"
+#"el mÃ©todo funciono despues de 4 intento, con resultado: 6.28504936779047"
 #FalsaPos(6,7, 10^-2, 100)
-#"el método funciono despues de 4 intento, con resultado: 6.28504928639502"
+#"el mÃ©todo funciono despues de 4 intento, con resultado: 6.28504928639502"
 
 #cos(x) = sqrt(x)----
 f7 = function(x){
@@ -365,7 +367,7 @@ FalsaPos = function(p0,p1,Tol, N){
     while(i <= N) {
       p = p1 - q1*(p1-p0)/(q1-q0)
       if (abs(p - p1) < Tol ){
-        return(paste('el método funciono despues de',i,'intento, con resultado:',p))
+        return(paste('el mÃ©todo funciono despues de',i,'intento, con resultado:',p))
       } 
       i = i+1
       q = f7(p)
@@ -382,11 +384,11 @@ FalsaPos = function(p0,p1,Tol, N){
 }
 FalsaPos(0,1, 10^-1, 100)
 #Newton(0.5,10^-1, 100)
-#"el método funciono despues de 2 intento, con resultado: 0.641714866792004"
+#"el mÃ©todo funciono despues de 2 intento, con resultado: 0.641714866792004"
 #Secante(0,1, 10^-1, 100)
-#"el método funciono despues de 3 intento, con resultado: 0.643753386653444"
+#"el mÃ©todo funciono despues de 3 intento, con resultado: 0.643753386653444"
 #FalsaPos(0,1, 10^-1, 100)
-#"el método funciono despues de 3 intento, con resultado: 0.650394980128365"
+#"el mÃ©todo funciono despues de 3 intento, con resultado: 0.650394980128365"
 
 #2 + cos(e^x - 2) = e^x----
 f8 = function(x){
@@ -409,7 +411,7 @@ FalsaPos = function(p0,p1,Tol, N){
     while(i <= N) {
       p = p1 - q1*(p1-p0)/(q1-q0)
       if (abs(p - p1) < Tol ){
-        return(paste('el método funciono despues de',i,'intento, con resultado:',p))
+        return(paste('el mÃ©todo funciono despues de',i,'intento, con resultado:',p))
       } 
       i = i+1
       q = f8(p)
@@ -426,11 +428,11 @@ FalsaPos = function(p0,p1,Tol, N){
 }
 FalsaPos(0,2, 10^-2, 100)
 #Newton(1,10^-2, 100)
-#"el método funciono despues de 1 intento, con resultado: 1.00768903625654"
+#"el mÃ©todo funciono despues de 1 intento, con resultado: 1.00768903625654"
 #Secante(0,2, 10^-2, 100)
-# "el método funciono despues de 7 intento, con resultado: 1.00798433628262"
+# "el mÃ©todo funciono despues de 7 intento, con resultado: 1.00798433628262"
 #FalsaPos(0,2, 10^-2, 100)
-#"el método funciono despues de 6 intento, con resultado: 1.0074629486589"
+#"el mÃ©todo funciono despues de 6 intento, con resultado: 1.0074629486589"
 
 #x^3 - 7*x^2 + 14*x - 6 = 0----
 f9 = function(x){
@@ -453,7 +455,7 @@ FalsaPos = function(p0,p1,Tol, N){
     while(i <= N) {
       p = p1 - q1*(p1-p0)/(q1-q0)
       if (abs(p - p1) < Tol ){
-        return(paste('el método funciono despues de',i,'intento, con resultado:',p))
+        return(paste('el mÃ©todo funciono despues de',i,'intento, con resultado:',p))
       } 
       i = i+1
       q = f9(p)
@@ -470,11 +472,11 @@ FalsaPos = function(p0,p1,Tol, N){
 }
 FalsaPos(0,1, 10^-1, 200)
 #Newton(1,10^-1, 200)
-#"el método funciono despues de 3 intento, con resultado: 0.584730165689234"
+#"el mÃ©todo funciono despues de 3 intento, con resultado: 0.584730165689234"
 #Secante(0,1, 10^-1, 200)
-#"el método funciono despues de 4 intento, con resultado: 0.596123473519421"
+#"el mÃ©todo funciono despues de 4 intento, con resultado: 0.596123473519421"
 #FalsaPos(0,1, 10^-1, 200)
-#"el método funciono despues de 4 intento, con resultado: 0.605751653009068"
+#"el mÃ©todo funciono despues de 4 intento, con resultado: 0.605751653009068"
 
 #cos(x) = x----
 f10 = function(x){
@@ -497,7 +499,7 @@ FalsaPos = function(p0,p1,Tol, N){
     while(i <= N) {
       p = p1 - q1*(p1-p0)/(q1-q0)
       if (abs(p - p1) < Tol ){
-        return(paste('el método funciono despues de',i,'intento, con resultado:',p))
+        return(paste('el mÃ©todo funciono despues de',i,'intento, con resultado:',p))
       } 
       i = i+1
       q = f10(p)
@@ -514,11 +516,11 @@ FalsaPos = function(p0,p1,Tol, N){
 }
 FalsaPos(0,2, 10^-2, 10000)
 #Newton(1,10^-2, 10000)
-#"el método funciono despues de 3 intento, con resultado: 0.739085133385284"
+#"el mÃ©todo funciono despues de 3 intento, con resultado: 0.739085133385284"
 #Secante(0,2, 10^-2, 10000)
-#"el método funciono despues de 5 intento, con resultado: 0.739081136054205"
+#"el mÃ©todo funciono despues de 5 intento, con resultado: 0.739081136054205"
 #FalsaPos(0,2, 10^-2, 10000)
-#"el método funciono despues de 5 intento, con resultado: 0.738726105793983"
+#"el mÃ©todo funciono despues de 5 intento, con resultado: 0.738726105793983"
 
 #-x^3 - cos(x) = 0----
 f11 = function(x){
@@ -541,7 +543,7 @@ FalsaPos = function(p0,p1,Tol, N){
     while(i <= N) {
       p = p1 - q1*(p1-p0)/(q1-q0)
       if (abs(p - p1) < Tol ){
-        return(paste('el método funciono despues de',i,'intento, con resultado:',p))
+        return(paste('el mÃ©todo funciono despues de',i,'intento, con resultado:',p))
       } 
       i = i+1
       q = f11(p)
@@ -558,8 +560,8 @@ FalsaPos = function(p0,p1,Tol, N){
 }
 FalsaPos(-1,0, 10^-1, 10000)
 #Newton(-1,10^-1, 10000)
-#"el método funciono despues de 2 intento, con resultado: -0.865684163176082"
+#"el mÃ©todo funciono despues de 2 intento, con resultado: -0.865684163176082"
 #Secante(-1,0, 10^-1, 10000)
-# "el método funciono despues de 5 intento, con resultado: -0.847783769432569"
+# "el mÃ©todo funciono despues de 5 intento, con resultado: -0.847783769432569"
 #FalsaPos(-1,0, 10^-1, 10000)
-#"el método funciono despues de 4 intento, con resultado: -0.862547487557127"
+#"el mÃ©todo funciono despues de 4 intento, con resultado: -0.862547487557127"
