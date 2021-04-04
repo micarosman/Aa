@@ -23,7 +23,7 @@ Newton = function(p0,Tol, N){
   while(i <= N) {
     p = p0 - f1(p0)/Df1(p0)
     if (abs(p - p0) < Tol ){
-      return(paste('el método funciono despues de',i,'intento, con resultado:',p))
+      return(paste('el mÃ©todo funciono despues de',i,'intento, con resultado:',p))
     } else {
       i = i+1
       p0 = p
@@ -35,9 +35,9 @@ Newton = function(p0,Tol, N){
 Newton(1.82,10^-2, 100)
 #ln(x-1) + cos(x-1) = 0 x E [1.3;2]----
 f2 = function(x){
-  x = log10(x-1) + cos(x-1)
+  x = log(x-1) + cos(x-1)
 }
-ff2 = expression(log10(x-1) + cos(x-1))
+ff2 = expression(log(x-1) + cos(x-1))
 df2 = D(ff2, "x")
 df2
 Df2 = function(x){
@@ -56,7 +56,7 @@ Newton = function(p0,Tol, N){
   while(i <= N) {
     p = p0 - f2(p0)/Df2(p0)
     if (abs(p - p0) < Tol ){
-      return(paste('el método funciono despues de',i,'intento, con resultado:',p))
+      return(paste('el m?todo funciono despues de',i,'intento, con resultado:',p))
     } else {
       i = i+1
       p0 = p
@@ -90,7 +90,7 @@ Newton = function(p0,Tol, N){
   while(i <= N) {
     p = p0 - f3(p0)/Df3(p0)
     if (abs(p - p0) < Tol ){
-      return(paste('el método funciono despues de',i,'intento, con resultado:',p))
+      return(paste('el mÃ©todo funciono despues de',i,'intento, con resultado:',p))
     } else {
       i = i+1
       p0 = p
@@ -110,15 +110,15 @@ plot(x,y, lines(x,y))
 abline(h=0)
 abline(v=0)
 Newton(3.7,10^-1, 10000)
-#(x-2)^2 - ln(x) = 0 x E [1;2] ^ x E [e; 4]---- ###revisar!! ----
+#(x-2)^2 - ln(x) = 0 x E [1;2] ^ x E [e; 4] ----
 f4 = function(x){
-  x = (x-2)^2 - log10(x)
+  x = (x-2)^2 - log(x)
 }
-ff4 = expression((x-2)^2 - log10(x))
+ff4 = expression((x-2)^2 - log(x))
 df4 = D(ff4, "x")
 df4 
 Df4 = function(x){
-  df4 = 2 * (x - 2) - 1/(x * log(10)) }
+  df4 = 2 * (x - 2) - 1/x }
 x = 1:2
 x
 y = f4(x)
@@ -133,7 +133,7 @@ Newton = function(p0,Tol, N){
   while(i <= N) {
     p = p0 - f4(p0)/Df4(p0)
     if (abs(p - p0) < Tol ){
-      return(paste('el método funciono despues de',i,'intento, con resultado:',p))
+      return(paste('el m?todo funciono despues de',i,'intento, con resultado:',p))
     }else {
       i = i+1
       p0 = p
@@ -176,7 +176,7 @@ Newton = function(p0,Tol, N){
   while(i <= N) {
     p = p0 - f5(p0)/Df5(p0)
     if (abs(p - p0) < Tol ){
-      return(paste('el método funciono despues de',i,'intento, con resultado:',p))
+      return(paste('el mÃ©todo funciono despues de',i,'intento, con resultado:',p))
     } else {
       i = i+1
       p0 = p
@@ -219,7 +219,7 @@ Newton = function(p0,Tol, N){
   while(i <= N) {
     p = p0 - f6(p0)/Df6(p0)
     if (abs(p - p0) < Tol ){
-      return(paste('el método funciono despues de',i,'intento, con resultado:',p))
+      return(paste('el mÃ©todo funciono despues de',i,'intento, con resultado:',p))
     } else {
       i = i+1
       p0 = p
@@ -272,7 +272,7 @@ Newton = function(p0,Tol, N){
   while(i <= N) {
     p = p0 - f7(p0)/Df7(p0)
     if (abs(p - p0) < Tol ){
-      return(paste('el método funciono despues de',i,'intento, con resultado:',p))
+      return(paste('el mÃ©todo funciono despues de',i,'intento, con resultado:',p))
     } else {
       i = i+1
       p0 = p
@@ -305,7 +305,7 @@ Newton = function(p0,Tol, N){
   while(i <= N) {
     p = p0 - f8(p0)/Df8(p0)
     if (abs(p - p0) < Tol ){
-      return(paste('el método funciono despues de',i,'intento, con resultado:',p))
+      return(paste('el mÃ©todo funciono despues de',i,'intento, con resultado:',p))
     } else {
       i = i+1
       p0 = p
@@ -338,7 +338,7 @@ Newton = function(p0,Tol, N){
   while(i <= N) {
     p = p0 - f9(p0)/Df9(p0)
     if (abs(p - p0) < Tol ){
-      return(paste('el método funciono despues de',i,'intento, con resultado:',p))
+      return(paste('el mÃ©todo funciono despues de',i,'intento, con resultado:',p))
     } else {
       i = i+1
       p0 = p
@@ -371,7 +371,7 @@ Newton = function(p0,Tol, N){
   while(i <= N) {
     p = p0 - f10(p0)/Df10(p0)
     if (abs(p - p0) < Tol ){
-      return(paste('el método funciono despues de',i,'intento, con resultado:',p))
+      return(paste('el mÃ©todo funciono despues de',i,'intento, con resultado:',p))
     } else {
       i = i+1
       p0 = p
@@ -404,7 +404,7 @@ Newton = function(p0,Tol, N){
   while(i <= N) {
     p = p0 - f11(p0)/Df11(p0)
     if (abs(p - p0) < Tol ){
-      return(paste('el método funciono despues de',i,'intento, con resultado:',p))
+      return(paste('el mÃ©todo funciono despues de',i,'intento, con resultado:',p))
     } else {
       i = i+1
       p0 = p
