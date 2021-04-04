@@ -21,7 +21,7 @@ Secante = function(p0,p1,Tol, N){
   while(i <= N) {
     p = p1 - q1*(p1-p0)/(q1-q0)
     if (abs(p - p1) < Tol ){
-      return(paste('el método funciono despues de',i,'intento, con resultado:',p))
+      return(paste('el mÃ©todo funciono despues de',i,'intento, con resultado:',p))
     } else {
       i = i+1
       p0 = p1
@@ -35,13 +35,13 @@ Secante = function(p0,p1,Tol, N){
 }
 Secante(1,2, 10^-2, 100)
 #Newton(1.82,10^-2, 100)
-#[1] "el método funciono despues de 1 intento, con resultado: 1.82945804108693"
+#[1] "el mÃ©todo funciono despues de 1 intento, con resultado: 1.82945804108693"
 #Secante(1,2, 10^-2, 100)
-#"el método funciono despues de 5 intento, con resultado: 1.82933117293153"
+#"el mÃ©todo funciono despues de 5 intento, con resultado: 1.82933117293153"
 
-#ln(x-1) + cos(x-1) = 0 x E [1.3;2]---- ver!!! ----
+#ln(x-1) + cos(x-1) = 0 x E [1.3;2] ----
 f2 = function(x){
-  x = log10(x-1) + cos(x-1)
+  x = log(x-1) + cos(x-1)
 }
 x = 1.3:2
 x
@@ -59,7 +59,7 @@ Secante = function(p0,p1,Tol, N){
   while(i <= N) {
     p = p1 - q1*(p1-p0)/(q1-q0)
     if (abs(p - p1) < Tol ){
-      return(paste('el método funciono despues de',i,'intento, con resultado:',p))
+      return(paste('el m?todo funciono despues de',i,'intento, con resultado:',p))
     } else {
       i = i+1
       p0 = p1
@@ -71,13 +71,13 @@ Secante = function(p0,p1,Tol, N){
   }
   return(paste('el metodo no funciono despues de', N, 'iteraciones, con resultado aproximado:', p))
 }
-Secante(1.9,2,10^-2, 100)
+Secante(1.3,2,10^-2, 100)
 #Newton(1.3,10^-2, 100)
-#"el método funciono despues de 4 intento, con resultado: 1.10868036376373"
-#Secante(1.9,2,10^-2, 100)
-#"el método funciono despues de 5 intento, con resultado: 2.83843824179344"
+#"el m?todo funciono despues de 3 intento, con resultado: 1.39774816447362"
+#Secante(1.3,2,10^-2, 100)
+#""el m?todo funciono despues de 7 intento, con resultado: 1.39776900040813"
 
-#2*x*cos(2*x) - (x-2)^2 = 0 x E [2;3] ^ x E [3;4]---- ver!!! ----
+#2*x*cos(2*x) - (x-2)^2 = 0 x E [2;3] ^ x E [3;4] ----
 f3 = function(x){
   x = 2*x*cos(2*x) - (x-2)^2
 }
@@ -97,7 +97,7 @@ Secante = function(p0,p1,Tol, N){
   while(i <= N) {
     p = p1 - q1*(p1-p0)/(q1-q0)
     if (abs(p - p1) < Tol ){
-      return(paste('el método funciono despues de',i,'intento, con resultado:',p))
+      return(paste('el mÃ©todo funciono despues de',i,'intento, con resultado:',p))
     } else {
       i = i+1
       p0 = p1
@@ -111,9 +111,9 @@ Secante = function(p0,p1,Tol, N){
 }
 Secante(2,3,10^-1, 100)
 # Newton(2.4,10^-1, 100)
-# "el método funciono despues de 1 intento, con resultado: 2.42551928434498"
+# "el mÃ©todo funciono despues de 1 intento, con resultado: 2.42551928434498"
 #Secante(2,3,10^-1, 100)
-#"el método funciono despues de 3 intento, con resultado: 2.37314878342558"
+#"el mÃ©todo funciono despues de 3 intento, con resultado: 2.37314878342558"
 
 x = 3:4
 x
@@ -125,13 +125,13 @@ abline(h=0)
 abline(v=0)
 Secante(3,4,10^-1, 10000)
 #Newton(3.7,10^-1, 10000)
-# "el método funciono despues de 1 intento, con resultado: 3.66703924054236"
+# "el mÃ©todo funciono despues de 1 intento, con resultado: 3.66703924054236"
 #Secante(3,4,10^-1, 10000)
-# "el método funciono despues de 4 intento, con resultado: 3.73192046127779"
+# "el mÃ©todo funciono despues de 4 intento, con resultado: 3.73192046127779"
 
 #(x-2)^2 - ln(x) = 0 x E [1;2] ^ x E [e; 4]----
 f4 = function(x){
-  x = (x-2)^2 -log10(x)
+  x = (x-2)^2 -log(x)
 }
 x = 1:2
 x
@@ -149,7 +149,7 @@ Secante = function(p0,p1,Tol, N){
   while(i <= N) {
     p = p1 - q1*(p1-p0)/(q1-q0)
     if (abs(p - p1) < Tol ){
-      return(paste('el método funciono despues de',i,'intento, con resultado:',p))
+      return(paste('el m?todo funciono despues de',i,'intento, con resultado:',p))
     } else {
       i = i+1
       p0 = p1
@@ -163,9 +163,9 @@ Secante = function(p0,p1,Tol, N){
 }
 Secante(1,2, 10^-3, 100)
 #Newton(1,10^-3, 100)
-#"el método funciono despues de 4 intento, con resultado: 1.56041049616681"
+#"el m?todo funciono despues de 4 intento, con resultado: 1.41239117196258"
 #Secante(1,2, 10^-3, 100)
-#"el método funciono despues de 7 intento, con resultado: 1.56041251743393"
+#"el m?todo funciono despues de 7 intento, con resultado: 1.41239118275496"
 
 x = exp(1):4
 x
@@ -177,9 +177,9 @@ abline(h=0)
 abline(v=0)
 Secante(exp(1),4, 10^-2, 10000)
 #Newton(exp(1),10^-2, 10000)
-#"el método funciono despues de 2 intento, con resultado: 2.6506683721065"
+#"el mÃ©todo funciono despues de 3 intento, con resultado: 3.057130224063"
 #Secante(exp(1),4, 10^-2, 10000)
-# "el método funciono despues de 5 intento, con resultado: 2.65066664137801"
+# "el mÃ©todo funciono despues de 5 intento, con resultado: 3.05695222946634"
 
 #e^x - 3*x^2 = 0 x E [0;1] ^ x E [3;5]----
 f5 = function(x){
@@ -201,7 +201,7 @@ Secante = function(p0,p1,Tol, N){
   while(i <= N) {
     p = p1 - q1*(p1-p0)/(q1-q0)
     if (abs(p - p1) < Tol ){
-      return(paste('el método funciono despues de',i,'intento, con resultado:',p))
+      return(paste('el mÃ©todo funciono despues de',i,'intento, con resultado:',p))
     } else {
       i = i+1
       p0 = p1
@@ -215,9 +215,9 @@ Secante = function(p0,p1,Tol, N){
 }
 Secante(0,1, 10^-2, 100)
 #Newton(0,10^-2, 100)
-#"el método funciono despues de 2 intento, con resultado: 0.910017665783406"
+#"el mÃ©todo funciono despues de 2 intento, con resultado: 0.910017665783406"
 #Secante(0,1, 10^-2, 100)
-#"el método funciono despues de 4 intento, con resultado: 0.910623538896086"
+#"el mÃ©todo funciono despues de 4 intento, con resultado: 0.910623538896086"
 
 x = seq(from=3, to=5, by= 0.01)
 x
@@ -229,9 +229,9 @@ abline(h=0)
 abline(v=0)
 Secante(3,5, 10^-2, 100)
 #Newton(5,10^-2, 100)
-#"el método funciono despues de 5 intento, con resultado: 3.73308078919076"
+#"el mÃ©todo funciono despues de 5 intento, con resultado: 3.73308078919076"
 #Secante(3,5, 10^-2, 100)
-#"el método funciono despues de 9 intento, con resultado: 3.73307383612786"
+#"el mÃ©todo funciono despues de 9 intento, con resultado: 3.73307383612786"
 
 #sin(x) - e^-x = 0 x E [0;1] ^ x E [3;4] ^ x E [6;7]----
 f6 = function(x){
@@ -253,7 +253,7 @@ Secante = function(p0,p1,Tol, N){
   while(i <= N) {
     p = p1 - q1*(p1-p0)/(q1-q0)
     if (abs(p - p1) < Tol ){
-      return(paste('el método funciono despues de',i,'intento, con resultado:',p))
+      return(paste('el mÃ©todo funciono despues de',i,'intento, con resultado:',p))
     } else {
       i = i+1
       p0 = p1
@@ -267,9 +267,9 @@ Secante = function(p0,p1,Tol, N){
 }
 Secante(0,1, 10^-2, 100)
 #Newton(0,10^-2, 100)
-#"el método funciono despues de 3 intento, con resultado: 0.588529412626355"
+#"el mÃ©todo funciono despues de 3 intento, con resultado: 0.588529412626355"
 #Secante(0,1, 10^-2, 100)
-#"el método funciono despues de 5 intento, con resultado: 0.588538358017851"
+#"el mÃ©todo funciono despues de 5 intento, con resultado: 0.588538358017851"
 
 x = seq(from=3, to=4, by= 0.01)
 x
@@ -281,9 +281,9 @@ abline(h=0)
 abline(v=0)
 Secante(3,4, 10^-2, 100)
 #Newton(3,10^-2, 100)
-#"el método funciono despues de 2 intento, con resultado: 3.09636396089665"
+#"el mÃ©todo funciono despues de 2 intento, con resultado: 3.09636396089665"
 #Secante(3,4, 10^-2, 100)
-#"el método funciono despues de 4 intento, con resultado: 3.09636350534766"
+#"el mÃ©todo funciono despues de 4 intento, con resultado: 3.09636350534766"
 
 x = seq(from=6, to=7, by= 0.01)
 x
@@ -295,9 +295,9 @@ abline(h=0)
 abline(v=0)
 Secante(6,7, 10^-2, 100)
 #Newton(7,10^-2, 100)
-#"el método funciono despues de 3 intento, con resultado: 6.28504927021944"
+#"el mÃ©todo funciono despues de 3 intento, con resultado: 6.28504927021944"
 #Secante(6,7, 10^-2, 100)
-#"el método funciono despues de 4 intento, con resultado: 6.28504936779047"
+#"el mÃ©todo funciono despues de 4 intento, con resultado: 6.28504936779047"
 
 #cos(x) = sqrt(x)----
 f7 = function(x){
@@ -319,7 +319,7 @@ Secante = function(p0,p1,Tol, N){
   while(i <= N) {
     p = p1 - q1*(p1-p0)/(q1-q0)
     if (abs(p - p1) < Tol ){
-      return(paste('el método funciono despues de',i,'intento, con resultado:',p))
+      return(paste('el mÃ©todo funciono despues de',i,'intento, con resultado:',p))
     } else {
       i = i+1
       p0 = p1
@@ -333,9 +333,9 @@ Secante = function(p0,p1,Tol, N){
 }
 Secante(0,1, 10^-1, 100)
 #Newton(0.5,10^-1, 100)
-#"el método funciono despues de 2 intento, con resultado: 0.641714866792004"
+#"el mÃ©todo funciono despues de 2 intento, con resultado: 0.641714866792004"
 #Secante(0,1, 10^-1, 100)
-#"el método funciono despues de 3 intento, con resultado: 0.643753386653444"
+#"el mÃ©todo funciono despues de 3 intento, con resultado: 0.643753386653444"
 
 #2 + cos(e^x - 2) = e^x----
 f8 = function(x){
@@ -357,7 +357,7 @@ Secante = function(p0,p1,Tol, N){
   while(i <= N) {
     p = p1 - q1*(p1-p0)/(q1-q0)
     if (abs(p - p1) < Tol ){
-      return(paste('el método funciono despues de',i,'intento, con resultado:',p))
+      return(paste('el mÃ©todo funciono despues de',i,'intento, con resultado:',p))
     } else {
       i = i+1
       p0 = p1
@@ -371,9 +371,9 @@ Secante = function(p0,p1,Tol, N){
 }
 Secante(0,2, 10^-2, 100)
 #Newton(1,10^-2, 100)
-#"el método funciono despues de 1 intento, con resultado: 1.00768903625654"
+#"el mÃ©todo funciono despues de 1 intento, con resultado: 1.00768903625654"
 #Secante(0,2, 10^-2, 100)
-# "el método funciono despues de 7 intento, con resultado: 1.00798433628262"
+# "el mÃ©todo funciono despues de 7 intento, con resultado: 1.00798433628262"
 
 #x^3 - 7*x^2 + 14*x - 6 = 0----
 f9 = function(x){
@@ -395,7 +395,7 @@ Secante = function(p0,p1,Tol, N){
   while(i <= N) {
     p = p1 - q1*(p1-p0)/(q1-q0)
     if (abs(p - p1) < Tol ){
-      return(paste('el método funciono despues de',i,'intento, con resultado:',p))
+      return(paste('el mÃ©todo funciono despues de',i,'intento, con resultado:',p))
     } else {
       i = i+1
       p0 = p1
@@ -409,9 +409,9 @@ Secante = function(p0,p1,Tol, N){
 }
 Secante(0,1, 10^-1, 200)
 #Newton(1,10^-1, 200)
-#"el método funciono despues de 3 intento, con resultado: 0.584730165689234"
+#"el mÃ©todo funciono despues de 3 intento, con resultado: 0.584730165689234"
 #Secante(0,1, 10^-1, 200)
-#"el método funciono despues de 4 intento, con resultado: 0.596123473519421"
+#"el mÃ©todo funciono despues de 4 intento, con resultado: 0.596123473519421"
 
 #cos(x) = x----
 f10 = function(x){
@@ -433,7 +433,7 @@ Secante = function(p0,p1,Tol, N){
   while(i <= N) {
     p = p1 - q1*(p1-p0)/(q1-q0)
     if (abs(p - p1) < Tol ){
-      return(paste('el método funciono despues de',i,'intento, con resultado:',p))
+      return(paste('el mÃ©todo funciono despues de',i,'intento, con resultado:',p))
     } else {
       i = i+1
       p0 = p1
@@ -447,9 +447,9 @@ Secante = function(p0,p1,Tol, N){
 }
 Secante(0,2, 10^-2, 10000)
 #Newton(1,10^-2, 10000)
-#"el método funciono despues de 3 intento, con resultado: 0.739085133385284"
+#"el mÃ©todo funciono despues de 3 intento, con resultado: 0.739085133385284"
 #Secante(0,2, 10^-2, 10000)
-#"el método funciono despues de 5 intento, con resultado: 0.739081136054205"
+#"el mÃ©todo funciono despues de 5 intento, con resultado: 0.739081136054205"
 
 #-x^3 - cos(x) = 0----
 f11 = function(x){
@@ -471,7 +471,7 @@ Secante = function(p0,p1,Tol, N){
   while(i <= N) {
     p = p1 - q1*(p1-p0)/(q1-q0)
     if (abs(p - p1) < Tol ){
-      return(paste('el método funciono despues de',i,'intento, con resultado:',p))
+      return(paste('el mÃ©todo funciono despues de',i,'intento, con resultado:',p))
     } else {
       i = i+1
       p0 = p1
@@ -485,6 +485,6 @@ Secante = function(p0,p1,Tol, N){
 }
 Secante(-1,0, 10^-1, 10000)
 #Newton(-1,10^-1, 10000)
-#"el método funciono despues de 2 intento, con resultado: -0.865684163176082"
+#"el mÃ©todo funciono despues de 2 intento, con resultado: -0.865684163176082"
 #Secante(-1,0, 10^-1, 10000)
-# "el método funciono despues de 5 intento, con resultado: -0.847783769432569"
+# "el mÃ©todo funciono despues de 5 intento, con resultado: -0.847783769432569"
